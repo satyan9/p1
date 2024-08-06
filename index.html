@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src=
+  "https://code.jquery.com/jquery-3.6.0.min.js"
+             integrity=
+  "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+              crossorigin="anonymous">
+       </script>
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 98%;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.header {
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0;
+  border-bottom: 1px solid #cac9c9;
+}
+.header img{
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.search {
+  display: flex;
+  width: 20%;
+  
+  padding: 5px;
+  font-size: 14px;
+  gap: 50px;
+  
+}
+.search input{
+  border: 1px solid #ddd;
+  border-radius: 80px;
+  color: #f5f5f5;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 55%;
+  padding-top: 30px;
+  display:block;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 14px;
+  font-weight:100;
+  color: #9d9393;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.titl,.fat{
+  font-size: 20px;
+  font-weight:900;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.fat{
+  border: none;
+}
+
+.subtitle {
+  font-size: 28px;
+  font-style:italic;
+  font-weight: 100;
+  max-width: 50%;
+  color: #5f5d5d;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.image img{
+  width: 100px;
+  height: 100px;
+}
+
+.buttons {
+  padding-inline-end: 1%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.buttons select{
+  border: 1px solid black;
+}
+.but{
+  background-color: #f8e6db;
+  color: #f05050;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.button {
+  background-color: #f05050;
+  color: #fff;
+  border: 1px solid #f05050;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.butto{
+  background-color: #f05050;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 30px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.butt{
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+#select_value{
+  outline: none;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    
+    <div class="search">
+      <img src="https://ph-static.imgix.net/ph-favicon-coral.ico"/>
+      <input type="text" placeholder="Search (ctrl + k)">
+    </div>
+    <ul class="nav">
+      <li><a href="#">Launches</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Advertise</a></li>
+    </ul>
+    <div class="buttons">
+      <button class="but">Subscribe</button>
+      <button class="button">Sign in</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="title">
+      Home > Product > Video Dubber - Fast Video Translator
+    </div>
+    <div class="image">
+      <img src="https://ph-files.imgix.net/3153ed76-d013-4a2b-a7ac-f2f4cbfc3cc4.png" alt="Video Dubber Logo">
+    </div>
+    <div class="titl">
+      Video Dubber - <select class="fat" id="mySelect">
+        <option><a href="#">Fast Video Translator</a></option>
+        <option><a href="#">Products</a></option>
+      <option><a href="#">News</a></option>
+      </select>
+    </div>
+    <div class="subtitle">
+      Translate videos in your own voice, globalize in a click!
+    </div>
+    <div class="buttons">
+      <select class="butt" id="mySelect">
+        <option><a href="#">Visit</a></option>
+      <option><a href="#">Launches</a></option>
+      <option><a href="#">Products</a></option>
+      <option><a href="#">News</a></option>
+      <option><a href="#">Community</a></option>
+      <option><a href="#">Advertise</a></option>
+      </select>
+      <button class="butto">UPVOTE 115</button>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+    $("#mySelect").hover(function() {
+      $(this).click();
+    });
+  });
+
+</script>
+</body>
+</html>
